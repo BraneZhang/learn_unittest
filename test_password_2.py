@@ -12,6 +12,7 @@ class PasswordWithJsonTestCase(unittest.TestCase):
         print('set up')
         self.test_data = json.loads(open(self.data_file_path).read())
 
+    @unittest.skip('test_weak_password')
     def test_weak_password(self):
         for data in self.test_data:
             passwd = data['password']
